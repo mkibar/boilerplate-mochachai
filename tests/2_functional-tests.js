@@ -65,11 +65,10 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
-Browser.site = 'https://boilerplate-mochachai.1nfernox.repl.co';
-//https://replit.com/@MustafaKibar1/freecodecamp-boilerplate-mochachai#tests/1_unit-tests.js
+Browser.site = 'https://freecodecamp-boilerplate-mochachai.mustafakibar1.repl.co';
 
 suite("Functional Tests with Zombie.js", function () {
-  this.timeout(5000);
+  this.timeout(10000);
 
   const browser = new Browser();
   suiteSetup(function(done) {
@@ -105,8 +104,8 @@ suite("Functional Tests with Zombie.js", function () {
           browser.assert.elements('span#dates', 1);
 
           done();
-        })
-      })
+        });
+      });
     });
 
   });
